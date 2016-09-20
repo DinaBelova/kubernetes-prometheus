@@ -25,13 +25,19 @@ spec:
           - '-storage.local.retention=6h'
           - '-storage.local.memory-chunks=500000'
           - '-config.file=/etc/prometheus/prometheus.yml'
+          - '-storage.local.path=/etc/prometheus/data'
         ports:
         - name: webui
           containerPort: 9090
         volumeMounts:
         - name: config-volume
           mountPath: /etc/prometheus
+        - name: data-volume
+          mountPath: /etc/prometheus/data
       volumes:
       - name: config-volume
         configMap:
           name: prometheus-core
+      - name: data-volume
+        hostPath:
+          path: /etc/prometheus/data
