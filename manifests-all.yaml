@@ -321,6 +321,8 @@ spec:
           mountPath: /etc/prometheus
         - name: data-volume
           mountPath: /etc/prometheus/data
+      nodeSelector:
+        app: prometheus
       volumes:
       - name: config-volume
         configMap:

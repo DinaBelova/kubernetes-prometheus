@@ -41,3 +41,5 @@ spec:
       - name: data-volume
         hostPath:
           path: /etc/prometheus/data
+      nodeSelector:
+        app: prometheus
