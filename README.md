@@ -8,7 +8,7 @@ To quickly start all the things just do this:
 ```bash
 kubectl create namespace monitoring
 kubectl --namespace monitoring create \
-  --filename https://raw.githubusercontent.com/giantswarm/kubernetes-prometheus/master/manifests-all.yaml
+  --filename https://raw.githubusercontent.com/DinaBelova/kubernetes-prometheus/master/manifests-all.yaml
 ```
 
 To shut down all components again:
