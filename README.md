@@ -6,7 +6,7 @@
 
 To quickly start all the things just do this:
 ```bash
-kubectl label node node1 app=prometheus
+kubectl label node node1 prometheus=true grafana=true
 kubectl create namespace monitoring
 kubectl --namespace monitoring create \
   --filename https://raw.githubusercontent.com/DinaBelova/kubernetes-prometheus/master/manifests-all.yaml
