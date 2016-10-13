@@ -37,7 +37,7 @@ spec:
           - name: grafana-persistent-storage
             mountPath: /var
       nodeSelector:
-        app: prometheus
+        grafana: true
       volumes:
       - name: grafana-persistent-storage
         emptyDir: {}
@@ -316,7 +316,7 @@ spec:
         - name: data-volume
           mountPath: /etc/prometheus/data
       nodeSelector:
-        app: prometheus
+        prometheus: true
       volumes:
       - name: config-volume
         configMap:
